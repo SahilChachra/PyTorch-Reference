@@ -36,10 +36,10 @@ batch_size = 64
 num_epochs = 1
 
 # Load data
-train_dataset = datasets.MNIST(root='./dataset/', train=True, transform=transforms.ToTensor(), download=True)
+train_dataset = datasets.CIFAR10(root='./dataset/', train=True, transform=transforms.ToTensor(), download=True)
 train_loader = DataLoader(dataset=train_dataset, batch_size=64, shuffle=True)
 
-test_dataset = datasets.MNIST(root='./dataset/', train=False, transform=transforms.ToTensor(), download=True)
+test_dataset = datasets.CIFAR10(root='./dataset/', train=False, transform=transforms.ToTensor(), download=True)
 test_loader = DataLoader(dataset=test_dataset, batch_size=64, shuffle=True)
 
 # Initialize Network
@@ -102,4 +102,3 @@ def check_accuracy(loader, model):
     # hence layers like BN will be fronzen else it'll throw error
 
 check_accuracy(train_loader, model)
-check_accuracy(test_loader, model)
