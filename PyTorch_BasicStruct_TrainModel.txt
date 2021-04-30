@@ -1,0 +1,52 @@
+'''
+Assumptions:-
+
+A. Custom dataset will be used for training
+B. Cuda is being used for Training
+
+'''
+
+1. Import all the libraries
+2. Define a class for the dataset
+3. Define Transforms for the data to be used
+4. Determine batch_size (as it will be used while importing data using loader)
+5. Create train_loader and test_loader
+6. Import the model to be trained, set to train mode and freeze layers
+7. Modify the layers of the model as per output and input
+8. Load the device to Cuda
+9. Determine Hyperparameters - max_epochs, learning_rate, Loss Function, Optimizer
+10. Create object for Tensorboard Writer
+11. Define function for saving check points
+12. Define schedulerr for Learning Rate
+12. Create for loop for max_epochs with progress bar
+    i. Create for loop for batch_index and (data, labels)
+        a. Load data and label on GPU
+        b. Do forward pass
+        c. Calculate loss using Loss function
+        d. Do backward pass
+        e. Calculate running loss, accuracy
+        f. Write Training loss, accuracy to TensorBoard Object
+        g. delete data, label, var which saved model's prediction during forward pass
+    ii. Write learning_rate, accuracy-loss to TensorBoard Object
+    iii. Print epoch number, loss and accuracy
+    iv. Update learningRate scheduler
+    v. If current_loss was less than min_loss, checkpoint the model
+13. After training completes, check accuracy on train and test dataset
+14. Clear cuda cache
+
+'''
+Things to Remember :-
+
+A. Load model to GPU
+B. Set model.train() while trainng and model.eval() before testing.evaluation
+C. Print the model architecture before using
+D. To use TensorBoard use - $tensorboard --logdir runs where runs is the folder to save TensorBoard logs
+E. Set batch size 11 and try to overfit the model and then use relevant batch_size and max_epochs
+F. Define Transforms using Transforms.Compose
+G. Don'y use Softmax in last layer with Loss func as CrossEntropy. Its like doing Softmax twice
+H. Use LearningRate Scheduler and EarlyStopping
+G. Use zero_grad()
+I. Shuffle data in train and test datasets
+J. Normalize the inputs
+
+'''
