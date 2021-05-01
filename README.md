@@ -13,8 +13,8 @@ To predict things have been never so easy. I used to wonder how Insurance amount
  
 ## :star: Topic Covered - Basics of PyTorch
 <ol>
-    <li>Defining simple Neural Network</li>
     <li>Using Tensor in PyTorch with various functions</li>
+    <li>Defining simple Neural Network</li>
     <li>Defining CNN with MNIST</li>
     <li>Transfer Learning and Fine Tuning</li>
     <li>Saving and Loading models</li>
