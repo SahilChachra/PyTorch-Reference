@@ -33,8 +33,12 @@ To predict things have been never so easy. I used to wonder how Insurance amount
 ## :eyes: Quick guide and training structure for PyTorch
 --> [Tips and Structure - PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
 
-## :heart: Owner
+## :heart:
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
+
+This repo is made by following tutorials on PyTorch by Aladdin Persson. [GitHub Link](https://github.com/aladdinpersson).
+
+(The code in this repo(for most of the topics) is different from the one taught in tutorials)
 
  License
 MIT © [Sahil Chachra]()
