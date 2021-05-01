@@ -30,8 +30,11 @@ To predict things have been never so easy. I used to wonder how Insurance amount
     <li> To be Implemented </li>
 </ol>
 
+## :eyes: Quick guide and training structure for PyTorch
+--> [Tips and Structure - PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
+
 ## :heart: Owner
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
 
-## :eyes: License
+ License
 MIT © [Sahil Chachra]()
