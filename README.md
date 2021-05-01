@@ -1,4 +1,4 @@
-<h1 align="center">PyTorch Refernce Repo</h1>
+<h1 align="center">PyTorch Reference Repo</h1>
 
 <div align= "center">
   <img src="https://github.com/SahilChachra/PyTorch-Reference/blob/main/assests/pytorch-logo.png">
