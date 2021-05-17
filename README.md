@@ -35,7 +35,7 @@ To be added
 
 ## :eyes: Quick guide and training structure for PyTorch
 --> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
----> [PyTorch Training Pipeline]
+--> [PyTorch Training Pipeline](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training_Pipeline.py)
 ## :heart:
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
 
