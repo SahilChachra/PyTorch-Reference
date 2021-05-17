@@ -33,8 +33,8 @@ To be added
     <li>ResNet</li>
 </ol>
 
-## :eyes: Quick guide and training structure for PyTorch
---> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
+## :eyes: Tips and Structure for PyTorch
+--> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt) <br>
 --> [PyTorch Training Pipeline](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training_Pipeline.py)
 ## :heart:
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
