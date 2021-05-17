@@ -27,12 +27,15 @@ To be added
 
 ## :star: Topic Covered - Implementation of State of Architectures in PyTorch
 <ol>
-    <li> To be Implemented </li>
+    <li>LeNet</li>
+    <li>VGG</li>
+    <li>GoogLeNet</li>
+    <li>ResNet</li>
 </ol>
 
 ## :eyes: Quick guide and training structure for PyTorch
---> [Tips and Structure - PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
-
+--> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt)
+---> [PyTorch Training Pipeline]
 ## :heart:
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
 
