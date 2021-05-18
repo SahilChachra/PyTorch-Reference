@@ -1,5 +1,5 @@
 '''
-This is a simple Training Pipeline for Pytorch.
+This is a simple Training Pipeline.
 
 '''
 

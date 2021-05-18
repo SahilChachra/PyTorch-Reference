@@ -1,5 +1,5 @@
 '''
-This is a simple Training Pipeline for Pytorch.
+This is a Training Pipeline with Learning Rate Scheduler.
 
 '''
 
