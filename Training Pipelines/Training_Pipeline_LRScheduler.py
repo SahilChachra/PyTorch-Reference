@@ -5,12 +5,11 @@ This is a Training Pipeline with Learning Rate Scheduler.
 
 # Import relevant Libraries
 
-import matplotlib.pyplot as plt
-import glob
 import cv2
-from sklearn.model_selection import train_test_split
-from sklearn import metrics
+import glob
 from tqdm import tqdm
+from sklearn import metrics
+import matplotlib.pyplot as plt
 
 import torch
 import torchvision
@@ -19,6 +18,9 @@ import torch.optim as optim
 import torchvision.models as models
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
+
+from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import train_test_split
 
 # -----------------
 '''

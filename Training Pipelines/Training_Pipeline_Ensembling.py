@@ -1,10 +1,9 @@
 '''
-This is a simple Training Pipeline.
+This is a Training Pipeline implementing Ensembling method of the classifier. For this we will also use StratifiedKFold split to have different models trained on diff parts of the dataset
 
 '''
 
 # Import relevant Libraries
-
 import cv2
 import glob
 from tqdm import tqdm
@@ -179,55 +178,65 @@ def plot_training_details(epoch_loss, lr, batch_size, epochs):
     print("Batch size {0}, LR = {1} and Epochs = {2}".format(batch_size, lr, epochs))
 
 # --------------- Now here we use all the functions defined --------------------
-images = train_labels.img_path.values  # Train_labels is a csv file which has columns such as img_paths, target
-targets = train_labels.target.values
-
-aug = None  # Add augmentation to DataLoader
-batch_size = 64 # Normally ranges between 32, 64 and 128.
-
-train_imgs, val_imgs, train_targets, val_targets = train_test_split(images, targets, 
-                                                                    stratify=targets,
-                                                                    random_state=42)
-
-train_dataset = YourDataSetClass(img_paths=train_imgs,
-                                     targets=train_targets,
-                                     resize=(224, 224),
-                                     augmentations=aug)
-
-train_loader = torch.utils.data.DataLoader(train_dataset,
-                                          batch_size=batch_size,
-                                          shuffle=True, num_workers=4)
-
-val_dataset = YourDataSetClass(img_paths=val_imgs,
-                                     targets=val_targets,
-                                     resize=(224, 224),
-                                     augmentations=aug)
-
-val_loader = torch.utils.data.DataLoader(val_dataset,
-                                          batch_size=batch_size,
-                                          shuffle=False, num_workers=4)
 
 # Configure model
 device = device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-epochs = 10
+
 loss_fn = nn.BCEWithLogitsLoss()
-lr = 0.005
 
-model = get_configured_model_resnext(model_name = "resnext50", pretrained=True)
-# Configure Input layer as required
-model.conv1 = nn.Conv2d(6, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-model.to(device)
+X = train_data_csv.img_path.values
+Y = train_data_csv.target.values
+skf = StratifiedKFold(n_splits=5)
+fold = 0
+lr = 5e-4
+batch_size = 32
+epochs = 5
 
-optimizer = optim.Adam(model.parameters(), lr=lr, amsgrad=True)
+for train_index, test_index in skf.split(X, Y):
+    
+    model = get_configured_model_resnet("resnet50", true)
+    model.conv1 = nn.Conv2d(6, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False) # Edit input layer as requirement
 
-epoch_loss = []
-for epoch in range(epochs):
-    mean_loss_batch = train_model(train_loader, model, optimizer, loss_fn, device)
-    epoch_loss.append(mean_loss_batch)
-    print("Epoch : {0}, Current Mean Loss : {1}".format(epoch+1, mean_loss_batch))
+    model.to(device)
 
-_actual, _preds = evaluate_model(train_loader, model, device)  # You can evaluate the model after each epoch also!
-roc_val = metrics.roc_auc_score(_actual, _preds)
-print("ROC AUC value is : ", roc_val)
+    train_images, valid_images = X[train_index], X[test_index]
+    train_targets, valid_targets = Y[train_index], Y[test_index]
+
+    train_dataset = YourDataSet(image_paths=train_images, targets=train_targets)
+    valid_dataset = YourDataSet(image_paths=valid_images, targets=valid_targets)
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
+    valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    epoch_loss = []
+    for epoch in range(epochs):
+        mean_loss_batch = train_model(train_loader, model, optimizer, loss_fn, device)
+        epoch_loss.append(mean_loss_batch)
+        print("Epoch : {0}, Current Mean Loss : {1}".format(epoch+1, mean_loss_batch))
+
+    _actual, _preds = evaluate_model(train_loader, model, device)  # You can evaluate the model after each epoch also!
+    roc_val = metrics.roc_auc_score(_actual, _preds)
+    print("ROC AUC value is : ", roc_val)
+
+    # Save each model after each epoch
+    torch.save(model.state_dict() + '-ResNet-' + str(fold) + '.pt')
+    models.append(model)
+    fold += 1
 
 plot_training_details(epoch_loss, lr, batch_size, epochs)
+
+# Create a TestLoader and submissions is a file which stores the path of input images and targets
+
+test_dataset = YourDataSet(image_paths=submission.img_path.values, targets=submission.target.values)
+test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
+
+# ++++++++++ Using Ensembling +++++++++
+
+sig = torch.nn.Sigmoid()
+outs = []
+for model in models:
+    predictions, valid_targets = evaluate_model(test_loader, model, device=device)
+    predictions = np.array(predictions)[:, 0]
+    out = sig(torch.from_numpy(predictions))
+    out = out.detach().numpy()
+    outs.append(out)
