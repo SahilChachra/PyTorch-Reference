@@ -9,7 +9,7 @@
 
 ## :innocent: Motivation
 
-To be added
+While solving few problems in Kaggle, I got tired of searching for codes snippets to add say a LR Scheduler or Save model while training or to implement StratifiedKSplit. So I created this repository to quickly refer to code snippets!
 
 ## :star: Topic Covered - Basics of PyTorch
 <ol>
@@ -34,7 +34,8 @@ To be added
 </ol>
 
 ## :star: Topic Covered - Various Training Pipelines (Code yet to be Uploaded)
---> All the pipelines will have a DataSet class.<br>
+--> The code mentioned in this folder are basically meant for Kaggle Problems right now. We'll keep updating!<br>
+--> All the pipelines are made considering you'll be using your own DataLoader.<br>
 --> All the code here are being/already used by me while exploring Kaggle.<br>
 --> All the codes are w.r.t to Classification problem to predict a class 0 or 1.<br>
 <ol>
