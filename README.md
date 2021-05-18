@@ -43,7 +43,7 @@ While solving few problems in Kaggle, I got tired of searching for codes snippet
 2. [Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_LRScheduler.py) <br>
 3. Training Pipeline - with Saving Checkpoint<br>
 4. [Training Pipeline - with StratifiedKSplit](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_StratifiedKSplit.py) <br>
-5. Training Pipeline - with Ensembling Technique <br>
+5. [Training Pipeline - with Ensembling Technique](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_Ensembling.py) <br>
 
 ## :eyes: Tips and Structure for PyTorch
 --> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt) <br>
