@@ -38,13 +38,12 @@ While solving few problems in Kaggle, I got tired of searching for codes snippet
 --> All the pipelines are made considering you'll be using your own DataLoader.<br>
 --> All the code here are being/already used by me while exploring Kaggle.<br>
 --> All the codes are w.r.t to Classification problem to predict a class 0 or 1.<br>
-<ol>
-    <li>[Training Pipeline - Basic](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(Basic).py)</li>
-    <li>[Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(LRScheduler).py)</li>
-    <li>Training Pipeline - with Saving Checkpoints</li>
-    <li>Training Pipeline - with StratifiedKSplit</li>
-    <li>Training Pipeline - with Ensembling Technique</li>
-</ol>
+
+1. [Training Pipeline - Basic](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(Basic).py)<br>
+2. [Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(LRScheduler).py) <br>
+3. Training Pipeline - with Savi2. eckpoint<br>
+4. Training Pipeline - with StratifiedKSpli2. <br>
+5. Training Pipeline - with Ensembling Technique <br>
 
 ## :eyes: Tips and Structure for PyTorch
 --> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt) <br>
