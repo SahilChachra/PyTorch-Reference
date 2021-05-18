@@ -33,7 +33,7 @@ While solving few problems in Kaggle, I got tired of searching for codes snippet
     <li>ResNet</li>
 </ol>
 
-## :star: Topic Covered - Various Training Pipelines (Code yet to be Uploaded)
+## :star: Topic Covered - Various Training Pipelines
 --> The code mentioned in this folder are basically meant for Kaggle Problems right now. We'll keep updating!<br>
 --> All the pipelines are made considering you'll be using your own DataLoader.<br>
 --> All the code here are being/already used by me while exploring Kaggle.<br>
