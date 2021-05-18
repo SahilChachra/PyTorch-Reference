@@ -39,8 +39,8 @@ While solving few problems in Kaggle, I got tired of searching for codes snippet
 --> All the code here are being/already used by me while exploring Kaggle.<br>
 --> All the codes are w.r.t to Classification problem to predict a class 0 or 1.<br>
 <ol>
-    <li>[Training Pipeline - Basic](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(Basic).py</li>
-    <li>[Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(LRScheduler).py</li>
+    <li>[Training Pipeline - Basic](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(Basic).py)</li>
+    <li>[Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline(LRScheduler).py)</li>
     <li>Training Pipeline - with Saving Checkpoints</li>
     <li>Training Pipeline - with StratifiedKSplit</li>
     <li>Training Pipeline - with Ensembling Technique</li>
