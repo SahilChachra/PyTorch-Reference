@@ -41,7 +41,7 @@ While solving few problems in Kaggle, I got tired of searching for codes snippet
 
 1. [Training Pipeline - Basic](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_Basic.py)<br>
 2. [Training Pipeline - with Learning Rate Scheduler](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_LRScheduler.py) <br>
-3. Training Pipeline - with Saving Checkpoint<br>
+3. Training Pipeline - with Saving Checkpoint based on Loss and Accuracy Metric<br>
 4. [Training Pipeline - with StratifiedKSplit](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_StratifiedKSplit.py) <br>
 5. [Training Pipeline - with Ensembling Inference](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training%20Pipelines/Training_Pipeline_Ensembling.py) <br>
 
