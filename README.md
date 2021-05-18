@@ -33,9 +33,21 @@ To be added
     <li>ResNet</li>
 </ol>
 
+## :star: Topic Covered - Various Training Pipelines (Code yet to be Uploaded)
+--> All the pipelines will have a DataSet class.<br>
+--> All the code here are being/already used by me while exploring Kaggle.<br>
+--> All the codes are w.r.t to Classification problem to predict a class 0 or 1.<br>
+<ol>
+    <li>Training Pipeline - Basic</li>
+    <li>Training Pipeline - with Learning Rate Scheduler</li>
+    <li>Training Pipeline - with Saving Checkpoints</li>
+    <li>Training Pipeline - with StratifiedKSplit</li>
+    <li>Training Pipeline - with Ensembling Technique</li>
+</ol>
+
 ## :eyes: Tips and Structure for PyTorch
 --> [Tips while using PyTorch](https://github.com/SahilChachra/PyTorch-Reference/blob/main/PyTorch_BasicStruct_TrainModel.txt) <br>
---> [PyTorch Training Pipeline](https://github.com/SahilChachra/PyTorch-Reference/blob/main/Training_Pipeline.py)
+
 ## :heart:
 Made with :heart:&nbsp;  by [Sahil Chachra](https://github.com/SahilChachra)
 
