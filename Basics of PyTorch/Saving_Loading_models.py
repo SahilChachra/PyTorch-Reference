@@ -132,7 +132,7 @@ for epoch in range(num_epochs):
     checkpoint = {'state_dict' : model.state_dict(), 'optimizer': optimizer.state_dict()}
 
     if epoch>0 and curr_loss < min_loss:
-        print('Current Loss is loss. Saving model state.')
+        print(f'Current Loss is {loss}. Saving model state.')
         print("Epoch : {0}, Loss : {1}".format(epoch, min_loss))
         min_loss = curr_loss
         saveCheckpoint(checkpoint)
